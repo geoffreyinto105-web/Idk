@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Name Checker</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 40px;
+      background-color: #f0f8ff;
+      text-align: center;
+    }
+
+    h2 {
+      color: #0077cc;
+      font-size: 36px;
+      margin-bottom: 30px;
+    }
+
+    label {
+      font-size: 20px;
+      display: block;
+      margin-bottom: 10px;
+    }
+
+    input[type="text"] {
+      font-size: 24px;
+      padding: 12px;
+      width: 80%;
+      max-width: 400px;
+      border: 2px solid #0077cc;
+      border-radius: 8px;
+      outline: none;
+    }
+
+    button {
+      font-size: 22px;
+      padding: 12px 24px;
+      margin-top: 20px;
+      background-color: #28a745;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    button:hover {
+      background-color: #218838;
+    }
+
+    #result {
+      margin-top: 30px;
+      font-size: 32px;
+      font-weight: bold;
+      color: #cc0055;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Hello, what's your name?</h2>
+
+  <label for="nameInput">Input your name:</label>
+  <input type="text" id="nameInput" placeholder="Enter your name here">
+  <br>
+  <button onclick="checkName()">Submit</button>
+
+  <div id="result"></div> <!-- This is where the message will appear -->
+
+  <script>
+    function checkName() {
+      const name = document.getElementById("nameInput").value.trim();
+      const resultDiv = document.getElementById("result");
+
+      if (name.toLowerCase() === "flordeliz") {
+        resultDiv.textContent = "💖 You're my GF 💖";
+        resultDiv.style.color = "#e91e63";
+      } else {
+        resultDiv.textContent = "❌ You're not my GF ❌";
+        resultDiv.style.color = "#888";
+      }
+    }
+  </script>
+
+</body>
+</html>
